@@ -30,7 +30,7 @@ router.get("/reviews", async (req, res) => {
 });
 
 router.get("/single-product", async (req, res) => {
-  await delay(600);
+  await delay(300);
   const days = 2;
   const getExpirationBadge = (d) =>
     `Expires in ${d} ${d === 1 ? "day" : "days"}`;
