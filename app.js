@@ -6,6 +6,7 @@ var logger = require("morgan");
 var cors = require("cors");
 
 var productsRouter = require("./routes/products");
+var jobsRouter = require("./routes/jobs");
 
 var app = express();
 
@@ -21,6 +22,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/api", productsRouter);
+app.use("/api/jobs", jobsRouter);
 
 app.use(function (req, res, next) {
   next(createError(404));
